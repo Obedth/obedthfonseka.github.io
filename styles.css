@@ -143,9 +143,12 @@ h2 {
 }
 
 .gallery img {
-  width: 100px;
   height: auto;
-  border-radius: 8px;
+  max-width: 100%;
+  width: auto;
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
 .project-card.active .gallery {
