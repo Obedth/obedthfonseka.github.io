@@ -133,6 +133,16 @@ h2 {
   font-size: 0.9rem;
   user-select: none;
 }
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.6);
+  border-radius: 20px;
+  z-index: 1;
+}
 
 .gallery {
   display: none;
@@ -143,9 +153,14 @@ h2 {
 }
 
 .gallery img {
-  width: 100px;
   height: auto;
-  border-radius: 8px;
+  max-width: 100%;
+  width: auto;
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
 }
 
 .project-card.active .gallery {
@@ -231,13 +246,3 @@ footer {
   user-select: none;
 }
 
-.dark-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(15, 23, 42, 0.6);
-  border-radius: 20px;
-  z-index: 1;
-}
