@@ -6,7 +6,7 @@
   <title>Obedth Fonseka | Music Producer & Audio Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header onmouseenter="this.style.boxShadow='0 0 10px rgba(234,179,8,0.5)'" onmouseleave="this.style.boxShadow='none'">
@@ -80,12 +80,10 @@
     </div>
 
     <div class="project-card" style="background-image: url('yohani.jpg'); position: relative; overflow: hidden;">
-  <div class="dark-overlay"></div>
-  <div class="project-overlay" style="position: relative; z-index: 2;">
+      <div class="dark-overlay"></div>
+      <div class="project-overlay" style="position: relative; z-index: 2;">
         <h3>A Recording with Yohani De Silva</h3>
-        <div class="project-description">
-          I had the privilege of working with Yohani De Silva on a commercial recording. She was incredibly humble and professional, and there was so much to learn from her creative process and the way she approached each detail.
-        </div>
+        <div class="project-description">I had the privilege of working with Yohani De Silva on a commercial recording. She was incredibly humble and professional, and there was so much to learn from her creative process and the way she approached each detail.</div>
         <span class="show-more" onclick="toggleProject(this)">Show more</span>
         <div class="gallery">
           <img src="Yohani1.jpg" alt="Yohani 1" />
@@ -93,13 +91,11 @@
       </div>
     </div>
 
-    <div class="project-card" style="background-image: url('IMAGE.jpg'); position: relative;">
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15,23,42,0.6); border-radius: 20px; z-index: 0;"></div>
-      <div class="project-overlay" style="position: relative; z-index: 1;">
+    <div class="project-card" style="background-image: url('IMAGE.jpg'); position: relative; overflow: hidden;">
+      <div class="dark-overlay"></div>
+      <div class="project-overlay" style="position: relative; z-index: 2;">
         <h3>A Rehearsal with The Maestro Mr. Amarasiri Peiris</h3>
-        <div class="project-description">
-          Participated in a rehearsal for the legend Mr. Amarasiri Peiris. It was a great chance to observe the artistic interpretation of orchestral music in real time.
-        </div>
+        <div class="project-description">Participated in a rehearsal for the legend Mr. Amarasiri Peiris. It was a great chance to observe the artistic interpretation of orchestral music in real time.</div>
         <span class="show-more" onclick="toggleProject(this)">Show more</span>
         <div class="gallery">
           <img src="Amarasiri1.jpg" alt="Amarasiri 1" />
@@ -107,13 +103,11 @@
       </div>
     </div>
 
-    <div class="project-card" style="background-image: url('IMAGE.jpg'); position: relative;">
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15,23,42,0.6); border-radius: 20px; z-index: 0;"></div>
-      <div class="project-overlay" style="position: relative; z-index: 1;">
+    <div class="project-card" style="background-image: url('IMAGE.jpg'); position: relative; overflow: hidden;">
+      <div class="dark-overlay"></div>
+      <div class="project-overlay" style="position: relative; z-index: 2;">
         <h3>A Day with Legendary Shihan Mihiranga</h3>
-        <div class="project-description">
-          It was a great opportunity working with this legendary artist. Another humble person I met and a unique voice that can take you to another world.
-        </div>
+        <div class="project-description">It was a great opportunity working with this legendary artist. Another humble person I met and a unique voice that can take you to another world.</div>
         <span class="show-more" onclick="toggleProject(this)">Show more</span>
         <div class="gallery">
           <img src="Shihan1.JPG" alt="Shihan 1" />
@@ -122,49 +116,5 @@
       </div>
     </div>
   </section>
-
-  <section class="youtube">
-    <h2>Obedth Fonseka On YouTube</h2>
-    <div class="youtube-videos">
-      <a href="https://youtu.be/LQ6fQ3r6C7k" target="_blank" class="youtube-video">
-        <img src="https://img.youtube.com/vi/LQ6fQ3r6C7k/0.jpg" alt="Video 1" />
-      </a>
-      <a href="https://youtu.be/sAikA7e5Ylk" target="_blank" class="youtube-video">
-        <img src="https://img.youtube.com/vi/sAikA7e5Ylk/0.jpg" alt="Video 2" />
-      </a>
-    </div>
-  </section>
-
-  <section class="resume">
-    <h2>Resume</h2>
-    <a href="Obedth-Fonseka-Resume-2025-August.pdf" download class="download-btn">
-      <i class="fas fa-download"></i> Download My Resume
-    </a>
-  </section>
-
-  <section class="contact">
-    <h2>Contact</h2>
-    <a href="mailto:obedthfonseka05@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-    <a href="https://linkedin.com/in/obedth-fonseka-414862326" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="https://www.instagram.com/_obedth_fonseka__/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="https://www.facebook.com/profile.php?id=61565583917517&ref=_ig_profile_ac" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Obedth Fonseka. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function toggleProject(element) {
-      const desc = element.previousElementSibling;
-      const card = element.closest('.project-card');
-      desc.classList.toggle('expanded');
-      card.classList.toggle('active');
-      element.textContent = desc.classList.contains('expanded') ? 'Show less' : 'Show more';
-    }
-    document.querySelector('.download-btn').addEventListener('click', function(e) {
-      setTimeout(() => alert('✅ Thanks for downloading my resume!'), 500);
-    });
-  </script>
 </body>
 </html>
