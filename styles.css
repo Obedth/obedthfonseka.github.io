@@ -151,15 +151,6 @@ h2 {
   border-radius: 8px;
 }
 
-.gallery img {
-  height: auto;
-  max-width: 100%;
-  width: auto;
-  transform: scale(1.5);
-  transition: transform 0.3s ease;
-  border-radius: 10px;
-}
-
 .project-card.active .gallery {
   display: flex;
 }
