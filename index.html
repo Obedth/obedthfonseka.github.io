@@ -117,48 +117,5 @@
     </div>
   </section>
   
-  <section class="youtube">
-    <h2>Obedth Fonseka On YouTube</h2>
-    <div class="youtube-videos">
-      <a href="https://youtu.be/LQ6fQ3r6C7k" target="_blank" class="youtube-video">
-        <img src="https://img.youtube.com/vi/LQ6fQ3r6C7k/0.jpg" alt="Video 1" />
-      </a>
-      <a href="https://youtu.be/sAikA7e5Ylk" target="_blank" class="youtube-video">
-        <img src="https://img.youtube.com/vi/sAikA7e5Ylk/0.jpg" alt="Video 2" />
-      </a>
-    </div>
-  </section>
-
-  <section class="resume">
-    <h2>Resume</h2>
-    <a href="Obedth-Fonseka-Resume-2025-August.pdf" download class="download-btn">
-      <i class="fas fa-download"></i> Download My Resume
-    </a>
-  </section>
-
-  <section class="contact">
-    <h2>Contact</h2>
-    <a href="mailto:obedthfonseka05@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-    <a href="https://linkedin.com/in/obedth-fonseka-414862326" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    <a href="https://www.instagram.com/_obedth_fonseka__/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="https://www.facebook.com/profile.php?id=61565583917517&ref=_ig_profile_ac" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Obedth Fonseka. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function toggleProject(element) {
-      const desc = element.previousElementSibling;
-      const card = element.closest('.project-card');
-      desc.classList.toggle('expanded');
-      card.classList.toggle('active');
-      element.textContent = desc.classList.contains('expanded') ? 'Show less' : 'Show more';
-    }
-    document.querySelector('.download-btn').addEventListener('click', function(e) {
-      setTimeout(() => alert('✅ Thanks for downloading my resume!'), 500);
-    });
-  </script>
 </body>
 </html>
