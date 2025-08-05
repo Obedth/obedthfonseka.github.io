@@ -145,12 +145,10 @@ h2 {
   user-select: none;
 }
 
-.gallery {
-  display: none;
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.gallery img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
 }
 
 .gallery img {
