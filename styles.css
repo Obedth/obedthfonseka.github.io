@@ -320,7 +320,6 @@ h3 {
   z-index: 0;
 }
 
-/* Handawaka collapsed = no overlay */
 .handawaka-card:not(.expanded) .project-overlay-bg {
   background: none;
 }
