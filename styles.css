@@ -274,5 +274,10 @@ footer {
 
 
 h3 {
-  font-size: 5rem;
+  font-size: 2rem;
+}
+
+/* Hide collapsed summary when expanded */
+.project-card.expanded .collapsed-summary {
+  display: none;
 }
