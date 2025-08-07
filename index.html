@@ -160,27 +160,28 @@
   <footer>
     <p>&copy; 2025 Obedth Fonseka. All rights reserved.</p>
   </footer>
-
   <script>
-    function toggleProject(element) {
-      const desc = element.previousElementSibling;
-      const card = element.closest('.project-card');
-      desc.classList.toggle('expanded');
-      card.classList.toggle('active');
-      element.textContent = desc.classList.contains('expanded') ? 'Show less' : 'Show more';
-    }
-    document.querySelector('.download-btn').addEventListener('click', function(e) {
-      setTimeout(() => alert('✅ Thanks for downloading my resume!'), 500);
-    });
-    
-<script>
   function toggleExpand(button) {
-    const card = button.closest('.project-card');
+    const card = button.closest('.expandable-card');
+    const summary = card.querySelector('.collapsed-summary');
+    const details = card.querySelector('.project-details');
+    
     card.classList.toggle('expanded');
-    button.textContent = card.classList.contains('expanded') ? 'See Less ▲' : 'See Details ▼';
-  }
-</script>
 
-  </script>
+    if (card.classList.contains('expanded')) {
+      summary.style.display = 'none';
+      details.style.display = 'block';
+      button.textContent = 'See Less ▲';
+    } else {
+      summary.style.display = 'block';
+      details.style.display = 'none';
+      button.textContent = 'See Details ▼';
+    }
+  }
+
+  document.querySelector('.download-btn')?.addEventListener('click', function () {
+    setTimeout(() => alert('✅ Thanks for downloading my resume!'), 500);
+  });
+</script>
 </body>
 </html>
