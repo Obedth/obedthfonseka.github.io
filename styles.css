@@ -303,3 +303,25 @@ h3 {
   display: none;
 }
 
+/* Make project-details hidden by default */
+.project-details {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Show project-details only when expanded */
+.project-card.expanded .project-details {
+  display: block;
+}
+
+/* Hide collapsed summary when expanded */
+.project-card.expanded .collapsed-summary {
+  display: none;
+}
+
+/* Optional: fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
