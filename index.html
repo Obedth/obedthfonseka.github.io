@@ -26,28 +26,25 @@
 
   <section>
     <h2>Projects</h2>
-
-    <div class="project-card collapsible">
-  <div class="project-overlay summary-view" onclick="toggleProjectDetails(this)">
+    <div class="project-card expandable-card" style="background-image: url('Nadhagama.jpg');">
+  <div class="project-overlay">
     <h3>Nadhagama 360° Rehearsals</h3>
-    <p class="project-description">Interned at Infinity Studios with Eshan Denipitiya and team.</p>
-    <span class="toggle-button">See Details ▼</span>
-  </div>
-
-  <div class="project-details">
-    <p class="full-description">
-      Excited to share that I had the incredible opportunity to work with the Naadhagama 360° team as an intern at Infinity Studios. Collaborating closely with Eshan Denipitiya and the talented Naadhagama crew was a truly enriching experience.
-    </p>
-    <div class="gallery">
-      <img src="Nadhagama1.jpg" alt="Nadhagama 1" />
-      <img src="Nadhagama2.jpg" alt="Nadhagama 2" />
-      <img src="Nadhagama3.jpg" alt="Nadhagama 3" />
-      <img src="Nadhagama4.jpg" alt="Nadhagama 4" />
-      <img src="Nadhagama5.jpg" alt="Nadhagama 5" />
+    <p class="collapsed-summary">Interned at Infinity Studios with Eshan Denipitiya and team.</p>
+    <div class="expandable-content">
+      <p>
+        Excited to share that I had the incredible opportunity to work with the Naadhagama 360° team as an intern at Infinity Studios. Collaborating closely with Eshan Denipitiya and the talented Naadhagama crew was a truly enriching experience.
+      </p>
+      <div class="gallery">
+        <img src="Nadhagama1.jpg" alt="Nadhagama 1" />
+        <img src="Nadhagama2.jpg" alt="Nadhagama 2" />
+        <img src="Nadhagama3.jpg" alt="Nadhagama 3" />
+        <img src="Nadhagama4.jpg" alt="Nadhagama 4" />
+        <img src="Nadhagama5.jpg" alt="Nadhagama 5" />
+      </div>
     </div>
+    <span class="toggle-btn" onclick="toggleExpand(this)">See Details ▼</span>
   </div>
 </div>
-
 
     <div class="project-card" style="background-image: url('Alokawarsha.JPG');">
       <div class="project-overlay">
@@ -172,13 +169,11 @@
     document.querySelector('.download-btn').addEventListener('click', function(e) {
       setTimeout(() => alert('✅ Thanks for downloading my resume!'), 500);
     });
-    function toggleProjectDetails(element) {
-  const card = element.closest('.collapsible');
-  const toggle = element.querySelector('.toggle-button');
-  card.classList.toggle('active');
-  toggle.textContent = card.classList.contains('active') ? 'Hide Details ▲' : 'See Details ▼';
-}
-
+    function toggleExpand(button) {
+  const card = button.closest('.expandable-card');
+  card.classList.toggle('expanded');
+  button.textContent = card.classList.contains('expanded') ? 'Hide Details ▲' : 'See Details ▼';
+    }
   </script>
 </body>
 </html>
