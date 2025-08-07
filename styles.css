@@ -1,3 +1,217 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f172a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  color: #facc15;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem 5rem;
+  background-color: #1e293b;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #facc15;
+  margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
+}
+
+.header-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header-text p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.header-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* Sections */
+section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #facc15;
+  display: inline-block;
+}
+
+/* Project Cards */
+.project-card {
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-overlay {
+  background-color: rgba(15, 23, 42, 0.85);
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+.project-overlay h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #facc15;
+}
+
+.project-description {
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.project-description.expanded {
+  max-height: 1000px;
+}
+
+.show-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #93c5fd;
+  cursor: pointer;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.gallery img {
+  max-width: calc(33% - 10px);
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Special Opacity Overlays for Specific Artists */
+.project-card:nth-of-type(4)::before,
+.project-card:nth-of-type(5)::before,
+.project-card:nth-of-type(6)::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(15, 23, 42, 0.55); /* Reduced opacity */
+  z-index: 1;
+  border-radius: 20px;
+}
+
+/* Ensure overlays stay behind text */
+.project-card:nth-of-type(4) .project-overlay,
+.project-card:nth-of-type(5) .project-overlay,
+.project-card:nth-of-type(6) .project-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* YouTube */
+.youtube-videos {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.youtube-video img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 15px;
+}
+
+/* Resume Download */
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #facc15;
+  color: #0f172a;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #fde68a;
+}
+
+/* Contact */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #facc15;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  background-color: #1e293b;
+  color: #94a3b8;
+  border-top: 1px solid #334155;
+  margin-top: 2rem;
+}
+
+
+
 /* Reset */
 * {
   margin: 0;
