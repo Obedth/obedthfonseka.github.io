@@ -163,22 +163,11 @@
     <p>&copy; 2025 Obedth Fonseka. All rights reserved.</p>
   </footer>
   <script>
-  function toggleExpand(button) {
+    function toggleExpand(button) {
     const card = button.closest('.expandable-card');
-    const summary = card.querySelector('.collapsed-summary');
-    const details = card.querySelector('.project-details');
-    
     card.classList.toggle('expanded');
-
-    if (card.classList.contains('expanded')) {
-      summary.style.display = 'none';
-      details.style.display = 'block';
-      button.textContent = 'See Less ▲';
-    } else {
-      summary.style.display = 'block';
-      details.style.display = 'none';
-      button.textContent = 'See Details ▼';
-    }
+    button.textContent = card.classList.contains('expanded') ? 'See Less ▲' : 'See Details ▼';
+  }
 
   document.querySelector('.download-btn')?.addEventListener('click', function () {
     setTimeout(() => alert('✅ Thanks for downloading my resume!'), 500);
