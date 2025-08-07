@@ -109,6 +109,8 @@ h2 {
   padding: 1rem;
   border-radius: 15px;
 }
+.handawaka-card:not(.expanded) .project-overlay-bg {
+  background: none;
 
 .project-card h3 {
   color: #FFFFFF;
