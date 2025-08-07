@@ -272,56 +272,26 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
-
-.project-card.expanded .project-overlay {
-  background-color: rgba(15, 23, 42, 0.85);
-  transform: scale(1.02);
-}
-
 .project-details {
   display: none;
-  margin-top: 1rem;
   animation: fadeIn 0.4s ease;
 }
-
 .project-card.expanded .project-details {
   display: block;
 }
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-h3 {
-  font-size: 2.5rem;
-}
-.project-summary {
+.collapsed-summary {
   transition: opacity 0.3s ease;
 }
-
-.project-card.expanded .project-summary {
-  display: none;
-}
-
-/* Make project-details hidden by default */
-.project-details {
-  display: none;
-  animation: fadeIn 0.4s ease;
-}
-
-/* Show project-details only when expanded */
-.project-card.expanded .project-details {
-  display: block;
-}
-
-/* Hide collapsed summary when expanded */
 .project-card.expanded .collapsed-summary {
   display: none;
 }
 
-/* Optional: fade animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+}
+h3 {
+  font-size: 2.5rem;
+}
