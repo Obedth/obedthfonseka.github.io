@@ -239,7 +239,7 @@ h3 {
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
   min-height: 250px;
@@ -292,7 +292,7 @@ h3 {
 .toggle-btn {
   color: #93c5fd;
   cursor: pointer;
-  margin-top: 8rem;
+  margin-top: 1rem;
   user-select: none;
 }
 
