@@ -255,14 +255,6 @@ footer {
 h3 {
   font-size: 2.5rem;
 }
-.expandable-card .project-details {
-  display: none;
-  margin-top: 1rem;
-}
-
-.expandable-card.expanded .project-details {
-  display: block;
-}
 
 .collapsed-summary {
   font-size: 0.95rem;
