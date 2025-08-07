@@ -111,7 +111,7 @@ h2 {
 }
 
 .project-card h3 {
-  color: #60a5fa;
+  color: #FFFFFF;
   margin-bottom: 0.5rem;
 }
 
@@ -257,27 +257,29 @@ footer {
   transform: scale(1.02);
 }
 
-.project-details {
-  display: none;
-  margin-top: 1rem;
-  animation: fadeIn 0.4s ease;
-}
-
-.project-card.expanded .project-details {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 
 h3 {
   font-size: 2rem;
 }
 
+/* Make project-details hidden by default */
+.project-details {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Show project-details only when expanded */
+.project-card.expanded .project-details {
+  display: block;
+}
+
 /* Hide collapsed summary when expanded */
 .project-card.expanded .collapsed-summary {
   display: none;
+}
+
+/* Optional: fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
