@@ -293,7 +293,7 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 h3 {
-  font-size: 10rem;
+  font-size: 2.5rem;
 }
 .project-summary {
   transition: opacity 0.3s ease;
