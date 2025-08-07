@@ -230,25 +230,25 @@ footer {
   font-family: 'Poppins', sans-serif;
   user-select: none;
 }
-.expandable-card .expandable-content {
+.expandable-card .project-details {
   display: none;
   margin-top: 1rem;
 }
 
-.expandable-card.expanded .expandable-content {
+.expandable-card.expanded .project-details {
   display: block;
-}
-
-.toggle-btn {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #93c5fd;
-  cursor: pointer;
-  font-weight: 500;
 }
 
 .collapsed-summary {
   font-size: 0.95rem;
   color: #facc15;
   margin-top: 0.5rem;
+}
+
+.toggle-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #93c5fd;
+  cursor: pointer;
+  font-weight: 500;
 }
