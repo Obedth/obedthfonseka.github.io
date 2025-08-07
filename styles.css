@@ -111,7 +111,7 @@ h2 {
 }
 
 .project-card h3 {
-  color: #60a5fa;
+  color: #FFFFFF;
   margin-bottom: 0.5rem;
 }
 
@@ -291,4 +291,7 @@ footer {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+h3 {
+  font-size: 1.5rem;
 }
