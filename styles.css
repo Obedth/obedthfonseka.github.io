@@ -310,3 +310,17 @@ h3 {
     transform: translateY(0);
   }
 }
+/* Default dark overlay */
+.project-overlay-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 20px;
+  z-index: 0;
+}
+
+/* Handawaka collapsed = no overlay */
+.handawaka-card:not(.expanded) .project-overlay-bg {
+  background: none;
+}
