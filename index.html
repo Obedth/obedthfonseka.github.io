@@ -166,11 +166,14 @@
     document.querySelector('.download-btn').addEventListener('click', function(e) {
       setTimeout(() => alert('✅ Thanks for downloading my resume!'), 500);
     });
-   function toggleExpand(button) {
-  const card = button.closest('.expandable-card');
-  card.classList.toggle('expanded');
-  button.textContent = card.classList.contains('expanded') ? 'Hide Details ▲' : 'See Details ▼';
-}
+<script>
+  function toggleExpand(btn) {
+    const card = btn.closest('.project-card');
+    card.classList.toggle('expanded');
+    btn.textContent = card.classList.contains('expanded') ? 'See Less ▲' : 'See Details ▼';
+  }
+</script>
+
   </script>
 </body>
 </html>
