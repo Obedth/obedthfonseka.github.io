@@ -252,3 +252,46 @@ footer {
   cursor: pointer;
   font-weight: 500;
 }
+.project-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  min-height: 250px;
+}
+
+/* Start with overlay transparent */
+.project-overlay {
+  background-color: rgba(15, 23, 42, 0);
+  padding: 2rem;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* When expanded, animate in darker overlay */
+.project-card.expanded .project-overlay {
+  background-color: rgba(15, 23, 42, 0.85);
+  transform: scale(1.02);
+}
+
+.project-details {
+  display: none;
+  margin-top: 1rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.project-card.expanded .project-details {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
