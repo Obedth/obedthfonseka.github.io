@@ -353,3 +353,20 @@ h3 {
 .handawaka-card:not(.expanded) .project-overlay-bg {
   background: none;
 }
+
+/* Expand on hover */
+.expandable-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+}
+
+/* Show details when hovered */
+.expandable-card:hover .project-details {
+  display: block;
+}
+
+/* Hide collapsed summary when hovered */
+.expandable-card:hover .collapsed-summary {
+  display: none;
+}
+
