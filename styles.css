@@ -263,7 +263,6 @@ footer {
   min-height: 250px;
 }
 
-/* Start with overlay transparent */
 .project-overlay {
   background-color: rgba(15, 23, 42, 0);
   padding: 2rem;
@@ -274,7 +273,6 @@ footer {
   justify-content: center;
 }
 
-/* When expanded, animate in darker overlay */
 .project-card.expanded .project-overlay {
   background-color: rgba(15, 23, 42, 0.85);
   transform: scale(1.02);
@@ -294,4 +292,3 @@ footer {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
