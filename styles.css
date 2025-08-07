@@ -242,16 +242,6 @@ footer {
   min-height: 250px;
 }
 
-.project-overlay {
-  background-color: rgba(15, 23, 42, 0);
-  padding: 2rem;
-  transition: background-color 0.4s ease, transform 0.4s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .project-card.expanded .project-overlay {
   background-color: rgba(15, 23, 42, 0.85);
   transform: scale(1.02);
@@ -282,4 +272,68 @@ h3 {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.expandable-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-overlay {
+  background-color: rgba(15, 23, 42, 0);
+  padding: 2rem;
+  height: 100%;
+  transition: background-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.expandable-card.expanded .project-overlay {
+  background-color: rgba(15, 23, 42, 0.85);
+}
+
+.collapsed-summary {
+  color: #facc15;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.expandable-card.expanded .collapsed-summary {
+  display: none;
+}
+
+.project-details {
+  display: none;
+  margin-top: 1rem;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.expandable-card.expanded .project-details {
+  display: block;
+}
+
+.toggle-btn {
+  color: #93c5fd;
+  cursor: pointer;
+  margin-top: 1rem;
+  user-select: none;
+}
+
+/* Simple fade in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
