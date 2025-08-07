@@ -231,6 +231,9 @@ footer {
   user-select: none;
 }
 
+h3 {
+  font-size: 2.5rem;
+}
 .project-card {
   position: relative;
   background-size: cover;
@@ -241,31 +244,66 @@ footer {
   transition: all 0.4s ease-in-out;
   min-height: 250px;
 }
+.expandable-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+}
 
 .project-overlay {
   background-color: rgba(15, 23, 42, 0);
   padding: 2rem;
-  transition: background-color 0.4s ease, transform 0.4s ease;
   height: 100%;
+  transition: background-color 0.4s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-h3 {
-  font-size: 2.5rem;
+.expandable-card.expanded .project-overlay {
+  background-color: rgba(15, 23, 42, 0.85);
 }
 
 .collapsed-summary {
-  font-size: 0.95rem;
   color: #facc15;
+  font-size: 0.95rem;
   margin-top: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.expandable-card.expanded .collapsed-summary {
+  display: none;
+}
+
+.project-details {
+  display: none;
+  margin-top: 1rem;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.expandable-card.expanded .project-details {
+  display: block;
 }
 
 .toggle-btn {
-  display: inline-block;
-  margin-top: 0.75rem;
   color: #93c5fd;
   cursor: pointer;
-  font-weight: 500;
+  margin-top: 1rem;
+  user-select: none;
+}
+
+/* Simple fade in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
