@@ -230,3 +230,21 @@ footer {
   font-family: 'Poppins', sans-serif;
   user-select: none;
 }
+
+.collapsible .project-details {
+  display: none;
+  margin-top: 1rem;
+}
+
+.collapsible.active .project-details {
+  display: block;
+}
+
+.toggle-button {
+  color: #93c5fd;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
