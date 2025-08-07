@@ -230,28 +230,7 @@ footer {
   font-family: 'Poppins', sans-serif;
   user-select: none;
 }
-.expandable-card .project-details {
-  display: none;
-  margin-top: 1rem;
-}
 
-.expandable-card.expanded .project-details {
-  display: block;
-}
-
-.collapsed-summary {
-  font-size: 0.95rem;
-  color: #facc15;
-  margin-top: 0.5rem;
-}
-
-.toggle-btn {
-  display: inline-block;
-  margin-top: 0.75rem;
-  color: #93c5fd;
-  cursor: pointer;
-  font-weight: 500;
-}
 .project-card {
   position: relative;
   background-size: cover;
@@ -273,26 +252,28 @@ footer {
   justify-content: center;
 }
 
-.project-card.expanded .project-overlay {
-  background-color: rgba(15, 23, 42, 0.85);
-  transform: scale(1.02);
+h3 {
+  font-size: 2.5rem;
 }
-
-.project-details {
+.expandable-card .project-details {
   display: none;
   margin-top: 1rem;
-  animation: fadeIn 0.4s ease;
 }
 
-.project-card.expanded .project-details {
+.expandable-card.expanded .project-details {
   display: block;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.collapsed-summary {
+  font-size: 0.95rem;
+  color: #facc15;
+  margin-top: 0.5rem;
 }
 
-h3 {
-  font-size: 2.5rem;
+.toggle-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #93c5fd;
+  cursor: pointer;
+  font-weight: 500;
 }
