@@ -309,7 +309,7 @@ h3 {
     opacity: 1;
     transform: translateY(0);
   }
-}
+  
 /* Default dark overlay */
 .project-overlay-bg {
   position: absolute;
