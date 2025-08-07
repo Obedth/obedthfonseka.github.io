@@ -269,9 +269,9 @@ h3 {
 }
 
 .collapsed-summary {
-  color: #facc15;
-  font-size: 0.95rem;
-  margin-top: 0.5rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  margin-top: 0.1rem;
   transition: opacity 0.3s ease;
 }
 
