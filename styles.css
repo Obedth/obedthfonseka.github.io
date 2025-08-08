@@ -143,10 +143,12 @@ h2 {
 }
 
 .gallery img {
-  width: 100px;
-  height: auto;
+  width: 130px; /* slightly bigger */
+  height: auto; /* keep aspect ratio */
   border-radius: 8px;
+  object-fit: contain; /* ensures no stretching */
 }
+
 
 .project-card.active .gallery {
   display: flex;
