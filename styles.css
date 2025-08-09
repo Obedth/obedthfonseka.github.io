@@ -135,19 +135,20 @@ h2 {
 }
 
 .gallery {
-  display: none;
-  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 1rem;
 }
 
 .gallery img {
-  width: 130px; /* slightly bigger */
-  height: auto; /* keep aspect ratio */
+  max-height: 120px; /* All images same height */
+  width: auto; /* Keep original aspect ratio */
+  height: auto;
+  object-fit: cover;
   border-radius: 8px;
-  object-fit: contain; /* ensures no stretching */
 }
+
 
 
 .project-card.active .gallery {
