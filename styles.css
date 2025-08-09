@@ -23,6 +23,7 @@ header {
 header h1 {
   font-size: 2.5rem;
   font-weight: 700;
+  margin-bottom: 0.25rem; /* reduced gap to subtitle */
 }
 
 header p {
@@ -87,7 +88,7 @@ section:hover {
 
 h2 {
   color: #f1f5f9;
-  margin-bottom: 0.2rem; /* smaller gap above subtitle */
+  margin-bottom: 0.1rem; /* smaller gap above subtitle */
   border: none; /* remove border here */
   padding-bottom: 0;
   user-select: none;
@@ -112,7 +113,7 @@ h2 {
 
 .project-card h3 {
   color: #FFFFFF;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .project-description {
@@ -254,6 +255,7 @@ footer {
 h3 {
   font-size: 2rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.2rem; /* reduced gap to subtitle */
 }
 
 /* Make project-details hidden by default */
@@ -364,7 +366,7 @@ h3 {
 .section-subtitle {
   font-size: 0.85rem;
   color: #94a3b8;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   font-style: italic;
   display: block; /* makes it take full width */
   padding-bottom: 0.5rem;
