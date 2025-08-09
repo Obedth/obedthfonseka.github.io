@@ -10,6 +10,13 @@
 </head>
   
 <body>
+  <nav class="tab-bar">
+  <a href="#about" class="tab active">About</a>
+  <a href="#projects" class="tab">Projects</a>
+  <a href="#certifications" class="tab">Certifications</a>
+  <a href="#contact" class="tab">Contact</a>
+</nav>
+
 <button id="backToTop" title="Go to top">
   <i class="fas fa-arrow-up"></i>
 </button>
@@ -30,7 +37,7 @@
   </div>
 </header>
 
-  <section>
+  <section id="about">
     <h2>About Me</h2>
     <p>I am a passionate and dedicated audio engineering student with six years of experience as a pianist and a solid foundation in music composition, audio production, and post-production techniques. Skilled in Cubase and experienced in live and studio settings, I excel at transforming creative ideas into professional-quality sound. My strong problem-solving abilities, leadership experience in school and church music programs, and commitment to continuous learning make me a valuable asset to any team seeking excellence in music production and audio engineering.</p>
   </section>
@@ -184,7 +191,16 @@
     </a>
   </section>
 
-  <section class="contact">
+  <section id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li><strong>Certified Audio Engineer</strong> — Audio Institute, 2023</li>
+    <li><strong>Music Production Masterclass</strong> — Online Academy, 2024</li>
+    <li><strong>Cubase Pro User Certification</strong> — Steinberg, 2023</li>
+  </ul>
+</section>
+
+ <section id="contact" class="contact">
     <h2>Contact</h2>
     <a href="mailto:obedthfonseka05@gmail.com"><i class="fas fa-envelope"></i> Email</a>
     <a href="https://linkedin.com/in/obedth-fonseka-414862326" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -218,6 +234,37 @@
   backToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+    <script>
+  const tabs = document.querySelectorAll('.tab-bar .tab');
+  const sections = [...tabs].map(tab => document.querySelector(tab.getAttribute('href')));
+
+  // Smooth scroll handled by CSS (html { scroll-behavior: smooth; })
+
+  function activateTab(index) {
+    tabs.forEach(tab => tab.classList.remove('active'));
+    if (tabs[index]) tabs[index].classList.add('active');
+  }
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + window.innerHeight / 3;
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+      if (sections[i].offsetTop <= scrollPos) {
+        activateTab(i);
+        break;
+      }
+    }
+  });
+
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', e => {
+      e.preventDefault();
+      sections[i].scrollIntoView({ behavior: 'smooth' });
+      activateTab(i);
+    });
+  });
+</script>
 
 </script>
 </body>
