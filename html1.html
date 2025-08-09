@@ -208,5 +208,80 @@
   <div class="left">
     <div class="subtitle">Get in Touch</div>
     <h2>Let's Chat, Reach Out to Us</h2>
-    <p class="description">Have questions o
+    <p class="description">Have questions or feedback? We're here to help. Send us a message, and we'll respond within 24 hours.</p>
 
+    <form id="contact-form">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName" placeholder="First name" required />
+
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName" placeholder="Last name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Email address" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Leave us message" required></textarea>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="privacy" required />
+        <label for="privacy">I agree to our friendly <a href="#" target="_blank">privacy policy</a></label>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="right">
+    <img src="myphoto.jpg" alt="Person smiling on phone" />
+    <div class="contact-info">
+      <div>
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <div>your.email@example.com</div>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.55.57 1 1 0 011 1v3.75a1 1 0 01-1 1A16 16 0 014 6a1 1 0 011-1h3.75a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.21 1.11z"/></svg>
+        <div>+94 77 123 4567</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("CRuFdyVtrwqhV65Eq");
+  })();
+
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (!form.privacy.checked) {
+      alert('Please agree to the privacy policy.');
+      return;
+    }
+
+    const params = {
+      firstName: form.firstName.value.trim(),
+      lastName: form.lastName.value.trim(),
+      email: form.email.value.trim(),
+      message: form.message.value.trim()
+    };
+
+    emailjs.send('service_7ov4npt', 'template_y7bqugn', params)
+      .then(() => {
+        alert('Message sent successfully! Thank you for reaching out.');
+        form.reset();
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        alert('Oops! Something went wrong, please try again later.');
+      });
+  });
+</script>
+
+</body>
+</html>
