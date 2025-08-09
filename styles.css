@@ -366,8 +366,7 @@ h3 {
   color: #94a3b8;
   margin-bottom: 1.5rem;
   font-style: italic;
-  border-bottom: 2px solid #334155;
+  display: block; /* makes it take full width */
   padding-bottom: 0.5rem;
-  display: inline-block;
-  min-width: 200px; /* adjust length */
+  border-bottom: 2px solid #334155; /* line */
 }
