@@ -534,3 +534,84 @@ h3 {
   background-color: #90D5FF; /* lighter yellow */
   transform: scale(1.1);
 }
+
+/* Base tab bar styles */
+.tab-bar {
+  position: fixed;
+  z-index: 1000;
+  user-select: none;
+  transition: all 0.5s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Vertical popup on right side */
+.tab-bar.vertical {
+  top: 40%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: rgba(30, 41, 59, 0.8);
+  padding: 0.5rem 0;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  width: 60px;
+  box-shadow: 0 0 15px rgba(15, 23, 42, 0.8);
+}
+
+.tab-bar.vertical .tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 1rem 0;
+  font-weight: 500;
+  border-left: 4px solid transparent;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, border-left-color 0.3s ease;
+}
+
+.tab-bar.vertical .tab:hover,
+.tab-bar.vertical .tab.active {
+  background-color: #facc15;
+  color: #0f172a;
+  border-left-color: #facc15;
+  cursor: pointer;
+}
+
+/* Sticky horizontal bar on top */
+.tab-bar.sticky {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 50px;
+  background: #1e293b;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 0;
+  box-shadow: 0 3px 15px rgba(15, 23, 42, 0.9);
+  font-size: 1rem;
+  writing-mode: horizontal-tb !important;
+}
+
+.tab-bar.sticky .tab {
+  writing-mode: horizontal-tb !important;
+  padding: 0 1.5rem;
+  border-left: none !important;
+  border-bottom: 3px solid transparent;
+  align-items: center;
+  font-weight: 600;
+}
+
+.tab-bar.sticky .tab:hover,
+.tab-bar.sticky .tab.active {
+  background-color: transparent !important;
+  border-bottom-color: #facc15 !important;
+  color: #facc15 !important;
+  cursor: pointer;
+}
