@@ -467,12 +467,15 @@ h3 {
 }
 
 #backToTop {
-  /* existing styles */
-  font-weight: 900;        /* Make arrow bold */
-  font-size: 24px;         /* Bigger arrow */
-  border-radius: 50%;      /* Circle shape */
-  padding: 12px 16px;
-  /* rest of your styles */
+  font-size: 28px;   /* bigger icon */
+  padding: 14px 18px;
+  border-radius: 50%; 
+  /* other styles remain */
+}
+#backToTop i {
+  /* no font-weight needed; icon is already bold */
+  display: block;
+  line-height: 1;
 }
 
 #backToTop {
