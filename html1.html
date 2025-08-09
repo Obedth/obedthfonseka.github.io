@@ -247,40 +247,30 @@
   </div>
 </div>
 
-<!-- EmailJS SDK -->
-<script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("CRuFdyVtrwqhV65Eq");
-  })();
+ <!-- EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/sdk/3.9.0/email.min.js"></script>
+  <script>
+    emailjs.init('CRuFdyVtrwqhV65Eq');
 
-  const form = document.getElementById('contact-form');
+    const form = document.getElementById('contact-form');
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
 
-    if (!form.privacy.checked) {
-      alert('Please agree to the privacy policy.');
-      return;
-    }
+      if (!form.privacy.checked) {
+        alert('Please agree to the privacy policy.');
+        return;
+      }
 
-    const params = {
-      firstName: form.firstName.value.trim(),
-      lastName: form.lastName.value.trim(),
-      email: form.email.value.trim(),
-      message: form.message.value.trim()
-    };
-
-    emailjs.send('service_7ov4npt', 'template_y7bqugn', params)
-      .then(() => {
-        alert('Message sent successfully! Thank you for reaching out.');
-        form.reset();
-      })
-      .catch((error) => {
-        console.error('EmailJS error:', error);
-        alert('Oops! Something went wrong, please try again later.');
-      });
-  });
+      emailjs.sendForm('service_7ov4npt', 'template_y7bqugn', this)
+        .then(() => {
+          alert('Message sent successfully!');
+          form.reset();
+        }, (error) => {
+          alert('Failed to send message.');
+          console.error(error);
+        });
+    });
 </script>
 
 </body>
