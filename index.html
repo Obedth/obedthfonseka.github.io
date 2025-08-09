@@ -226,7 +226,6 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-    <script>
   const tabs = document.querySelectorAll('.tab-bar .tab');
   const sections = [...tabs].map(tab => document.querySelector(tab.getAttribute('href')));
 
@@ -276,13 +275,12 @@
   window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
       tabBar.classList.add('sticky');
-      tabBar.classList.remove('vertical');
+      tabBar.classList.remove('horizontal');
     } else {
-      tabBar.classList.add('vertical');
+      tabBar.classList.add('horizontal');
       tabBar.classList.remove('sticky');
     }
   });
-</script>
 
 </script>
 </body>
