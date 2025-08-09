@@ -368,5 +368,6 @@ h3 {
   font-style: italic;
   border-bottom: 2px solid #334155;
   padding-bottom: 0.5rem;
-  display: block; /* instead of inline-block */
+  display: inline-block;
+  min-width: 200px; /* adjust length */
 }
