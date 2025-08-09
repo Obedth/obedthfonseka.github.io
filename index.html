@@ -271,16 +271,16 @@
   }
   updateActiveTab();
 
-  // Switch between vertical popup and sticky horizontal on scroll
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      tabBar.classList.add('sticky');
-      tabBar.classList.remove('horizontal');
-    } else {
-      tabBar.classList.add('horizontal');
-      tabBar.classList.remove('sticky');
-    }
-  });
+const tabBar = document.getElementById('tabBar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    tabBar.classList.add('sticky');
+  } else {
+    tabBar.classList.remove('sticky');
+  }
+});
+
 
 </script>
 </body>
