@@ -372,3 +372,92 @@ h3 {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #334155; /* line */
 }
+
+/* === HERO SECTION === */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('header-photo.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 1rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #facc15;
+  margin: 0.5rem 0;
+}
+
+.hero-summary {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #e2e8f0;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.hero-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #facc15;
+  color: #0f172a;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.primary-btn:hover {
+  background-color: #fde68a;
+}
+
+.secondary-btn:hover {
+  background-color: #fff;
+  color: #0f172a;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
