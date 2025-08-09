@@ -1,105 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Portfolio</title>
-
-  <!-- styles -->
-  <link rel="stylesheet" href="styles1.css" />
-
-  <!-- icons -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("CRuFdyVtrwqhV65Eq");
+    })();
+  </script>
 </head>
 <body>
-  <div class="page">
-
-    <!-- decorative shapes -->
-    <div class="shapes" aria-hidden="true">
-      <div class="shape circle s1" data-threshold="160"></div>
-      <div class="shape rounded s2" data-threshold="180"></div>
-      <div class="shape blob s3" data-threshold="200"></div>
-      <div class="shape triangle s4" data-threshold="140"></div>
-      <div class="shape semicircle s5" data-threshold="160"></div>
-    </div>
-
-    <!-- main content panel -->
-    <main class="wrap">
-      <section class="panel" aria-labelledby="contactTitle">
-        <h1 id="contactTitle" class="sr-only">Contact</h1>
-
-        <!-- left: form -->
-        <div class="left">
-          <div class="panel-header">
-            <h2>Let's work together</h2>
-            <p class="muted">Send a quick message — I usually reply within 24 hours.</p>
-          </div>
-
-          <form id="contact-form" class="form" enctype="multipart/form-data" autocomplete="off">
-            <label class="field">
-              <span class="label-text">Name</span>
-              <input type="text" name="from_name" placeholder="Your name" required />
-            </label>
-
-            <label class="field">
-              <span class="label-text">Email</span>
-              <input type="email" name="reply_to" placeholder="you@domain.com" required />
-            </label>
-
-            <label class="field">
-              <span class="label-text">Message</span>
-              <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-            </label>
-
-            <label class="field file">
-              <span class="label-text">Attachment (optional)</span>
-              <!-- EmailJS supports file input via sendForm (ensure your EmailJS template expects it) -->
-              <input type="file" name="attachment" accept=".pdf,.doc,.docx,.zip,.png,.jpg" />
-            </label>
-
-            <div class="actions">
-              <button type="submit" class="btn">Send Message</button>
-              <div id="status" role="status" class="status" aria-live="polite"></div>
-            </div>
-          </form>
-        </div>
-
-        <!-- right: social square -->
-        <aside class="right">
-          <div class="social-square">
-            <div class="social-top">
-              <img src="" alt="" class="profile-pic" aria-hidden="true" />
-              <h3 class="name">Your Name</h3>
-              <p class="role muted">Music Producer • Audio Engineer</p>
-            </div>
-
-            <div class="social-links">
-              <!-- Replace hrefs with your real links -->
-              <a class="social" href="https://linkedin.com/" target="_blank" rel="noopener">
-                <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
-              </a>
-              <a class="social" href="https://instagram.com/" target="_blank" rel="noopener">
-                <i class="fab fa-instagram"></i><span>Instagram</span>
-              </a>
-              <a class="social" href="https://facebook.com/" target="_blank" rel="noopener">
-                <i class="fab fa-facebook-f"></i><span>Facebook</span>
-              </a>
-              <a class="social" href="mailto:youremail@example.com">
-                <i class="fas fa-envelope"></i><span>Email</span>
-              </a>
-            </div>
-
-            <div class="small-note muted">Click an icon to open</div>
-          </div>
-        </aside>
-      </section>
-    </main>
+  <div class="background">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+    <div class="shape shape4"></div>
   </div>
 
-  <!-- script (initializes EmailJS & shapes behaviour) -->
+  <div class="container">
+    <div class="card">
+      <h1>Get in Touch</h1>
+      <div class="social-links">
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+
+      <form id="contact-form">
+        <input type="text" name="from_name" placeholder="Your Name" required>
+        <input type="email" name="reply_to" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <input type="file" name="attachment">
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
