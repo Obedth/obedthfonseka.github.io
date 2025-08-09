@@ -10,7 +10,7 @@
 </head>
   
 <body>
-<nav class="tab-bar">
+<nav id="popupTab" class="tab-bar vertical">
   <a href="index.html" class="tab active">About</a>
   <a href="index.html#projects" class="tab">Projects</a>
   <a href="certifications.html" class="tab">Certifications</a>
@@ -254,6 +254,33 @@
       sections[i].scrollIntoView({ behavior: 'smooth' });
       activateTab(i);
     });
+  });
+
+      const tabBar = document.getElementById('popupTab');
+  const tabs = tabBar.querySelectorAll('.tab');
+
+  // Update active tab based on current URL
+  function updateActiveTab() {
+    const currentPath = window.location.pathname.split('/').pop();
+    tabs.forEach(tab => {
+      const href = tab.getAttribute('href');
+      if (href.includes(currentPath)) {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      }
+    });
+  }
+  updateActiveTab();
+
+  // Switch between vertical popup and sticky horizontal on scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      tabBar.classList.add('sticky');
+      tabBar.classList.remove('vertical');
+    } else {
+      tabBar.classList.add('vertical');
+      tabBar.classList.remove('sticky');
+    }
   });
 </script>
 
