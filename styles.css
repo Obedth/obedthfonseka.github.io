@@ -467,12 +467,21 @@ h3 {
 }
 
 #backToTop {
+  /* existing styles */
+  font-weight: 900;        /* Make arrow bold */
+  font-size: 24px;         /* Bigger arrow */
+  border-radius: 50%;      /* Circle shape */
+  padding: 12px 16px;
+  /* rest of your styles */
+}
+
+#backToTop {
   display: none; /* Hidden by default */
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 9999;
-  background-color: #facc15;  /* Yellow */
+  background-color: #90D5FF;  /* Yellow */
   color: #0f172a; /* Dark text */
   border: none;
   outline: none;
@@ -488,12 +497,3 @@ h3 {
   background-color: #90D5FF; /* lighter yellow */
   transform: scale(1.1);
 }
-#backToTop {
-  /* existing styles */
-  font-weight: 900;        /* Make arrow bold */
-  font-size: 24px;         /* Bigger arrow */
-  border-radius: 50%;      /* Circle shape */
-  padding: 12px 16px;
-  /* rest of your styles */
-}
-
