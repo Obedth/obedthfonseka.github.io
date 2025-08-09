@@ -1,4 +1,4 @@
-// Cursor shape movement
+// Cursor shape movemen
 document.addEventListener("mousemove", (e) => {
   document.querySelectorAll(".shape").forEach((shape) => {
     const speed = shape.dataset.speed || 15;
