@@ -485,6 +485,15 @@ h3 {
 }
 
 #backToTop:hover {
-  background-color: #fde68a; /* lighter yellow */
+  background-color: #90D5FF; /* lighter yellow */
   transform: scale(1.1);
 }
+#backToTop {
+  /* existing styles */
+  font-weight: 900;        /* Make arrow bold */
+  font-size: 24px;         /* Bigger arrow */
+  border-radius: 50%;      /* Circle shape */
+  padding: 12px 16px;
+  /* rest of your styles */
+}
+
