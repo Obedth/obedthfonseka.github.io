@@ -544,74 +544,50 @@ h3 {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Vertical popup on right side */
-.tab-bar.vertical {
-  top: 10%;
-  right: 0;
+/* === Floating & Sticky Tab Bar === */
+
+.tab-bar {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  width: auto;
+  background: rgba(30, 41, 59, 0.85);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
   display: flex;
-  flex-direction: column;
-  background: rgba(30, 41, 59, 0.8);
-  padding: 0.5rem 0;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  width: 60px;
+  gap: 1.5rem;
   box-shadow: 0 0 15px rgba(15, 23, 42, 0.8);
+  transition: all 0.5s ease;
+  z-index: 1000;
 }
 
-.tab-bar.vertical .tab {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.tab-bar .tab {
   color: #e2e8f0;
   text-decoration: none;
-  padding: 1rem 0;
-  font-weight: 500;
-  border-left: 4px solid transparent;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease, border-left-color 0.3s ease;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-.tab-bar.vertical .tab:hover,
-.tab-bar.vertical .tab.active {
+.tab-bar .tab:hover,
+.tab-bar .tab.active {
   background-color: #facc15;
   color: #0f172a;
-  border-left-color: #facc15;
-  cursor: pointer;
 }
 
-/* Sticky horizontal bar on top */
 .tab-bar.sticky {
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   width: 100vw;
-  height: 50px;
-  background: #1e293b;
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center;
-  padding: 0 1rem;
   border-radius: 0;
+  background-color: #1e293b;
+  padding: 0.5rem 2rem;
+  justify-content: center;
   box-shadow: 0 3px 15px rgba(15, 23, 42, 0.9);
   font-size: 1rem;
-  writing-mode: horizontal-tb !important;
 }
 
-.tab-bar.sticky .tab {
-  writing-mode: horizontal-tb !important;
-  padding: 0 1.5rem;
-  border-left: none !important;
-  border-bottom: 3px solid transparent;
-  align-items: center;
-  font-weight: 600;
-}
-
-.tab-bar.sticky .tab:hover,
-.tab-bar.sticky .tab.active {
-  background-color: transparent !important;
-  border-bottom-color: #facc15 !important;
-  color: #facc15 !important;
-  cursor: pointer;
-}
